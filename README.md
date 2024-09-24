@@ -52,24 +52,24 @@ Installation
 
     Then you should set the following option to make sure treetile works correctly
     ```lua
-    treetile.focusnew = true
+    treetile.new_focus = true
     ```
     If no extra settings about focus are added in your rc.lua, please set
     ```lua
-    treetile.focusnew = false
+    treetile.new_focus = false
     ```
 5. Restart and you're done.
 
 Configuration
 ----
 
-1. The following option controls the new client apprear on the left or the right side
+1. The following option controls the new vertical client appear on the left or the right side
     of current client:
     ```lua
-    treetile.direction = "right" -- or "left"
+    treetile.new_vertical = "right" -- or "left"
     ```
 
-2. By default, direction of split is decided based on the dimensions of the last focused
+3. By default, direction of split is decided based on the dimensions of the last focused
    client. If you want you to force the direction of the split, bind keys to
    `treetile.vertical` and `treetile.horizontal` functions. For example:
     ```lua
@@ -77,7 +77,7 @@ Configuration
     awful.key({ modkey }, "h", treetile.horizontal)
     ```
 
-3. Set the keyboard shortcut for resizing the descendant clients
+4. Set the keyboard shortcut for percent-resizing the descendant clients
    ` treetile.resize_client(inc) `. The value of inc can be from 0.01 to 0.99,
    negative or positive, for example:
     ```lua

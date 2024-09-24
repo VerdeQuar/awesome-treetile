@@ -565,6 +565,14 @@ function treetile.vertical()
     end
 end
 
+function treetile.toggle()
+     if treetile.new_split == "vertical"
+          treetile.horizontal()
+     else
+          treetile.vertical()
+     end
+end
+
 function treetile.rotate(c)
     local t = c and c.screen.selected_tag or awful.screen.focused().selected_tag
     local node = c and trees[t].root:find_if(match(c)).parent
